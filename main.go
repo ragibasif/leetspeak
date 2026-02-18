@@ -1,35 +1,54 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"strings"
+)
 
-func main() {
+func getLeet(key string) (string, bool) {
 	leetspeak := map[string]string{
 		"A": "4",
 		"B": "8",
 		"C": "(",
-		"D": "",
 		"E": "3",
-		"F": "",
 		"G": "6",
 		"H": "#",
 		"I": "1",
 		"J": "_",
-		"K": "",
 		"L": "1_",
-		"M": "",
-		"N": "",
 		"O": "0",
-		"P": "",
 		"Q": "0_",
-		"R": "",
 		"S": "5",
 		"T": "7",
-		"U": "",
 		"V": "/",
 		"W": "//",
 		"X": "><",
 		"Y": "`/",
 		"Z": "2",
 	}
-	fmt.Println(leetspeak)
+
+
+	val, exists := leetspeak[key]
+	return val, exists
+}
+
+
+func main() {
+
+	args := os.Args[1:]
+	res := []string{}
+	for _, arg := range args {
+		buf := []string{}
+		for _, c := range arg {
+			symbol, ok := getLeet(strings.ToUpper(string(c)))
+			if ok {
+				buf = append(buf,symbol)
+			} else {
+				buf = append(buf,string(c))
+			}
+		}
+		res = append(res,strings.Join(buf,""))
+	}
+	fmt.Println(strings.Join(res,""))
 }
