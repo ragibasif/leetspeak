@@ -37,9 +37,9 @@ go run main.go hello world
 | E | 3 |
 | G | 6 |
 | H | # |
-| I | 1 |
+| I | ! |
 | J | _ |
-| L | 1_ |
+| L | 1 |
 | O | 0 |
 | Q | 0_ |
 | S | 5 |
