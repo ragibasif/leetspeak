@@ -1,5 +1,7 @@
 # leetspeak
 
+A Go command-line program to convert an ASCII string to "leetspeak".
+
 | Letter | Leetspeak |
 | ------ | --------- |
 | A      | 4         |
