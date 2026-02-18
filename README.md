@@ -2,9 +2,11 @@
 
 A simple command-line tool written in Go that converts text into leetspeak (l33t speak).
 
+![demo](./demo.gif)
+
 ## What is Leetspeak?
 
-Leetspeak is an informal language or code that substitutes letters with numbers or symbols that look visually similar (e.g. `A` → `4`, `E` → `3`, `S` → `5`).
+Leetspeak is an informal language or code that substitutes letters with numbers or symbols that look visually similar (e.g. `A` → `4`, `E` → `3`, `S` → `5`). [Learn more](https://en.wikipedia.org/wiki/Leet).
 
 ## Usage
 
@@ -19,10 +21,10 @@ go run main.go hello
 # Output: #3110
 
 go run main.go leetspeak
-# Output: 1_3375p34k
+# Output: 13375p34k
 
 go run main.go hello world
-# Output: #3110//0r1_d
+# Output: #3110 //0r1_d
 ```
 
 ## Character Map
@@ -53,6 +55,7 @@ Letters not in the map are left unchanged.
 ## Build
 
 ```bash
-go build -o leet main.go
-./leet hello world
+go build
+./leetspeak hello world
+# Output: #3110 //0r1_d
 ```

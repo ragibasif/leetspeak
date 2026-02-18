@@ -14,9 +14,9 @@ func getLeet(key string) (string, bool) {
 		"E": "3",
 		"G": "6",
 		"H": "#",
-		"I": "1",
+		"I": "!",
 		"J": "_",
-		"L": "1_",
+		"L": "1",
 		"O": "0",
 		"Q": "0_",
 		"S": "5",
@@ -50,5 +50,5 @@ func main() {
 		}
 		res = append(res,strings.Join(buf,""))
 	}
-	fmt.Println(strings.Join(res,""))
+	fmt.Println(strings.Join(res," "))
 }
